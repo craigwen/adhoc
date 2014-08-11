@@ -1,13 +1,14 @@
 // Add play/pause button actions
-function player() {
-	if (audioTrack1.paused) {
+function player(song) {
+	if (song.paused) {
 		$(playButton).removeClass("play-btn");
 		$(playButton).addClass("pause-btn");
-		audioTrack1.play();
-	} else {
+		song.play();
+	} 
+	else {
 		$(playButton).removeClass("pause-btn");
 		$(playButton).addClass("play-btn");
-		audioTrack1.pause();
+		song.pause();
 	}
 }
 
@@ -55,15 +56,16 @@ function setAttributes(el, attrs) {
 }
 
 var audioTrack1 = document.getElementById("audiotrack1"),
-	/* audioTrack2 = document.getElementById("audiotrack2"), */
+/* 	audioTrack2 = document.getElementById("audiotrack2"), */
 	playButton = document.createElement("button"),
 	muteButton = document.createElement("button"),
 	playback1 = document.getElementById("playback1"),
+	/* playback2 = document.getElementById("playback2"), */
 	playhead = document.createElement("progress"),
 	playbackTime = document.createElement("div");
 playButton.type = "button";
 muteButton.type = "button";
-playButton.addEventListener("click", player, false);
+playButton.addEventListener("click", function (){ player(audioTrack1) }, false);
 muteButton.addEventListener("click", muter, false);
 setAttributes(playButton, { "type": "button", "class": "play-btn"});
 setAttributes(muteButton, { "type": "button", "class": "speaker-btn"});
@@ -79,7 +81,7 @@ audioTrack1.removeAttribute("controls");
 audioTrack1.addEventListener('ended', finish, false);
 var duration = audioTrack1.duration;
 audioTrack1.addEventListener('timeupdate', updatePlayhead, false);
-audioTrack1.addEventListener('playing', function(){ playhead.max = audioTrack.duration; }, false);
+audioTrack1.addEventListener('playing', function(){ playhead.max = audioTrack1.duration; }, false);
 
 // Smooth scroll function
 $(".scroll").click(function(event) {		
