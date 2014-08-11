@@ -1,13 +1,13 @@
 // Add play/pause button actions
 function player() {
-	if (audioTrack.paused) {
+	if (audioTrack1.paused) {
 		$(playButton).removeClass("play-btn");
 		$(playButton).addClass("pause-btn");
-		audioTrack.play();
+		audioTrack1.play();
 	} else {
 		$(playButton).removeClass("pause-btn");
 		$(playButton).addClass("play-btn");
-		audioTrack.pause();
+		audioTrack1.pause();
 	}
 }
 
@@ -18,17 +18,17 @@ function setText(el,text) {
 
 // reset time slider to beginning upon completion of song
 function finish() {
-	audioTrack.currentTime = 0;
+	audioTrack1.currentTime = 0;
 	$(playButton).removeClass("pause-btn");
 	$(playButton).addClass("play-btn");
 }
 
 // Update progress bar as song plays
 function updatePlayhead() { 
-	playhead.value = audioTrack.currentTime;
-	var s = parseInt(audioTrack.currentTime % 60);
-    var m = parseInt((audioTrack.currentTime / 60) % 60);
-    parseInt((audioTrack.currentTime / 60) % 60);
+	playhead.value = audioTrack1.currentTime;
+	var s = parseInt(audioTrack1.currentTime % 60);
+    var m = parseInt((audioTrack1.currentTime / 60) % 60);
+    parseInt((audioTrack1.currentTime / 60) % 60);
     s = (s >= 10) ? s : "0" + s;
     m = (m >= 10) ? m : "0" + m;
     playbacktime.innerHTML = m + ':' + s ;
@@ -36,12 +36,12 @@ function updatePlayhead() {
 
 // Mute button
 function muter() {
-	if (audioTrack.volume == 0) {
-		audioTrack.volume = 1;
+	if (audioTrack1.volume == 0) {
+		audioTrack1.volume = 1;
 		$(muteButton).removeClass('muted-btn');
 		$(muteButton).addClass('speaker-btn');
 	} else {
-		audioTrack.volume = 0;
+		audioTrack1.volume = 0;
 		$(muteButton).removeClass('speaker-btn');
 		$(muteButton).addClass('muted-btn');
 	}
@@ -54,11 +54,11 @@ function setAttributes(el, attrs) {
 	}
 }
 
-var audioPlayer = document.getElementById("audioplayer1"),
-	audioTrack = document.getElementById("audiotrack1"),
+var audioTrack1 = document.getElementById("audiotrack1"),
+	/* audioTrack2 = document.getElementById("audiotrack2"), */
 	playButton = document.createElement("button"),
 	muteButton = document.createElement("button"),
-	playback = document.getElementById("playback1"),
+	playback1 = document.getElementById("playback1"),
 	playhead = document.createElement("progress"),
 	playbackTime = document.createElement("div");
 playButton.type = "button";
@@ -69,17 +69,17 @@ setAttributes(playButton, { "type": "button", "class": "play-btn"});
 setAttributes(muteButton, { "type": "button", "class": "speaker-btn"});
 setAttributes(playbackTime, { "id": "playbacktime"});
 setAttributes(playhead, { "min": "0", "max": "100", "value": "0", "id": "playhead" });
-playback.appendChild(playButton);
-playback.appendChild(playhead);
-playback.appendChild(playbackTime);
-playback.appendChild(muteButton);
+playback1.appendChild(playButton);
+playback1.appendChild(playhead);
+playback1.appendChild(playbackTime);
+playback1.appendChild(muteButton);
 updatePlayhead();
-$(audioTrack).addClass("no-display");
-audioTrack.removeAttribute("controls");
-audioTrack.addEventListener('ended', finish, false);
-var duration = audioTrack.duration;
-audioTrack.addEventListener('timeupdate', updatePlayhead, false);
-audioTrack.addEventListener('playing', function(){ playhead.max = audioTrack.duration; }, false);
+$(audioTrack1).addClass("no-display");
+audioTrack1.removeAttribute("controls");
+audioTrack1.addEventListener('ended', finish, false);
+var duration = audioTrack1.duration;
+audioTrack1.addEventListener('timeupdate', updatePlayhead, false);
+audioTrack1.addEventListener('playing', function(){ playhead.max = audioTrack.duration; }, false);
 
 // Smooth scroll function
 $(".scroll").click(function(event) {		
