@@ -3,9 +3,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ad Hoc: Early Music Choir</title>
-	<link rel="stylesheet" href="css/styles-playlist.css" title="General styles">
+	<link rel="stylesheet" href="css/styles.css" title="General styles">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Lora:400,800|Montserrat:400,700' rel='stylesheet' type='text/css'> <!-- Google fonts -->
 </head>
 
@@ -28,66 +27,64 @@
 <div id="hero-img"></div>
 
 <div class="wrapper">
-	<section id="about" class="row">
+	<section id="about" class="row clearfix">
 		<div class="column half centered">
 			<a id="about-anchor"></a>
 			<h1>about</h1>
 			<p>Ad Hoc is a growing ensemble of vocalists and musicians living and performing in New York City.  We explore the traditions of early music and also play with its possibilities, drawing from an eclectic array of influences to keep it fresh.  Our core is a group of dedicated residents, and we’re always looking to bring in skilled, creative guests to work with us on upcoming projects.</p>
-			<p>Interested in joining Ad Hoc as a resident or guest?</p>
-			<p><a class="scroll" href="#contact-anchor">Drop us a line</a>.</p>
-			<div class="column centered space-top clearfix">
-				<h1>residents</h1>
+			<p>Interested in joining Ad Hoc as a resident or guest? <a class="scroll" href="#contact-anchor">Drop us a line</a>.</p>
+			<div class="column centered">
 				<ul>
 					<li><img src="img/tina.jpg" alt="Tina"></li>
 					<li><img src="img/joe.jpg" alt="Joe"></li>
-					<li><img src="img/carol.jpg" alt="Carol"></li>
 					<li><img src="img/lynn.jpg" alt="Lynn"></li>
 					<li><img src="img/val.jpg" alt="Val"></li>
 				</ul>
 			</div>
-			<div class="column centered space-top">
-				<h1>guests</h1>
-				<p>Coming Soon</p>
-			</div>
 		</div>	
 	</section>
 </div> <!-- End .wrapper -->
-
+	
 	<section>
-		<div id="music" class="row">
-			<div class="column half centered">			
-				<a id="music-anchor"></a>
-				<h1>music</h1>
-				<div class="player">
-				    <div class="title"></div>
-				    <div class="artist"></div>
-				    <div class="controls">
-				        <div class="play"></div>
-				        <div class="pause"></div>
-       				    <div class="tracker"></div>
-       				    <div class="time">0:00</div>
-				        <div class="rew"></div>
-				        <div class="fwd"></div>
-				    </div>
-				    <!-- <div class="volume"></div> -->
+		<div id="music">			
+			<a id="music-anchor"></a>
+			<h1>music</h1>
+			<figure id="audioplayer">
+				<div id="playback-container" class="column half centered">
+					<div id="playback"></div>
+					<audio controls id="audiotrack" preload="auto" >
+						<source src="adhoc_arcadelt2014.ogg" type="audio/ogg">
+						<source src="adhoc_arcadelt2014.mp3" type="audio/mpeg">
+					</audio>
 				</div>
-				<ul class="playlist">
-				    <li audiourl="adhoc_arcadelt2014.mp3" artist="Jacques Arcadelt">Il bianco dolce cigno, <span class="pl-artist">Jacques Arcadelt</span></li>
-				    <li audiourl="CLIP_ad_una.mp3" artist="Luca Marenzio">Ad Una Fresca Riva, <span class="pl-artist">Luca Marenzio</span> </li>
-				    <li audiourl="CLIP_amarilli.mp3" artist="Giulio Caccini">Amarilli mia bella, <span class="pl-artist">Giulio Caccini</span></li>
-				    <li audiourl="CLIP_ocessate.mp3" artist="Alessandro Scarlatti">O Cessate di piagarmi, <span class="pl-artist">Alessandro Scarlatti</span></li>
-				</ul>		
-			</div>
+			</figure>			
+			<h3>VOI VE N’ANDANTE AL CIELO</h3>
+			<p>Jacques Arcadelt</p>
+			
+			<!--
+<figure id="audioplayer">
+				<div id="playback-container" class="column half centered">
+					<div id="playback"></div>
+					<audio controls id="audiotrack" preload="auto" >
+						<source src="adhoc_arcadelt2014.ogg" type="audio/ogg">
+						<source src="adhoc_arcadelt2014.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+			</figure>			
+			<h3>VOI VE N’ANDANTE AL CIELO</h3>
+			<p>Jacob Arcadelt</p>
+-->
+
 		</div>
 	</section>
+
 
 	<section id="shows">
 		<a id="shows-anchor"></a>
 		<h1>shows</h1>
-		<img src="img/adhoc_winter2014.jpg">
-<!-- 	<h4>SUMMER OF LOVE</h4>
+		<h4>SUMMER OF LOVE</h4>
 		<p>7PM, JULY 27, 2014</p>
-		<p>107 E 63RD STREET, NO. 4B</p> -->
+		<p>107 E 63RD STREET, NO. 4B</p>
 	</section>
 	
 <div class="wrapper">
@@ -105,6 +102,6 @@
 	</footer>
 	
 			
-	<script src="js/myscripts-playlist.js"></script>
+	<script src="js/myscripts.js"></script>
 </body>
 

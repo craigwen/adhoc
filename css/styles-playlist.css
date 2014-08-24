@@ -67,7 +67,7 @@ a:hover { border-bottom: 2px solid black; }
 
 img { height: auto; max-width: 100%; }
 
-nav, h1, h3, h4, #shows p, footer p, #playbacktime {
+nav, h1, h3, h4, #shows p, footer p, #playbacktime, .time {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -81,7 +81,7 @@ header { padding: 1.5rem 0; }
 nav { font-size: 0.9em; text-align: center; }
 nav li { margin: 1.95em 0; }
 
-#about h1 { margin-bottom: 2.5em; }
+#about h1, #music h1 { margin-bottom: 2.5em; }
 #about p { font-family: 'Lora', serif; font-size: 1.3em; line-height: 1.25em; margin-bottom: 1.75rem; padding: 0 0.8em; }
 #about p:last-child { margin-bottom: 3.75rem; }
 #about li { width: 35%; margin: 0 auto; margin-bottom: 0.2em; }
@@ -98,14 +98,17 @@ nav li { margin: 1.95em 0; }
 
 #shows { 
 /* 	height: 45em;  */
-	border: black 1px solid;
-	background-image: url('../img/adhoc_winter2014.jpg');
+	/* background-image: url('../img/adhoc_winter2014.jpg'); */
 	background-size: cover;
-	color: white;
+/* 	color: white; */
 	padding-top: 5.1em; 
 	padding-bottom: 5.1em;
 }
-#shows h1 { margin-bottom: 4em; font-size: 1.2em; }
+#shows h1 { 
+	/* margin-bottom: 4em;  */
+	margin-bottom: 2em;
+	font-size: 1.2em; 
+}
 #shows h4 { font-size: 2.5em; margin-bottom: 0.35em; }
 #shows p { font-size: 1.5em; line-height: 1.25em; }
 
@@ -193,7 +196,10 @@ footer p { font-size: 0.45em; line-height: 5em; }
 	#playback-container { min-width: 600px; }
 	#playback1 progress { width: 65%; }
 	
-	#shows h1 { margin-bottom: 10.15em; }
+	#shows h1 {
+		/* margin-bottom: 10.15em;  */
+		margin-bottom: 2em;
+	}
 	#shows h4 { font-size: 4.85em; }
 	#shows p { font-size: 2.5em; }
 }
@@ -298,14 +304,7 @@ progress::-moz-progress-bar { background-color: #141414; }
 	top: 65px;
 	width: 100%;
 }
-/*
-.controls .play, .controls .pause, .controls .rew, .controls .fwd {
-    background: transparent url("../img/spr.png") no-repeat scroll 0 0;
-    float: left;
-    height: 100%;
-    width: 33%;
-}
-*/
+
 .controls .play {
     /* background-position: -8px -171px; */
     background: url('../img/play_icon.png') no-repeat center center;
@@ -362,12 +361,11 @@ progress::-moz-progress-bar { background-color: #141414; }
 	left: 35px;
 	position: absolute;
 	top: 10px;
-	width: 60.5%;
+	width: 67.5%;
 	display:inline-block;
 	background: #808080;
 }
 .ui-slider-range {
-    /* background: transparent url("../img/spr.png") no-repeat scroll 5px -222px; */
     background: black;
     height: 100%;
     position: absolute;
@@ -390,15 +388,12 @@ progress::-moz-progress-bar { background-color: #141414; }
 .time {
 	display: inline-block;
 	position: absolute;
-	right: 3em;
+	right: 1.5em;
 	top: 10px;
 }
 .playlist {
     list-style-type: none;
     font-family: 'Lora', serif;
-    /* margin: -10px 0 0 2px; */
-/*     padding-bottom: 10px; */
-/*     padding-top: 15px; */
     position: relative;
     width: 100%;
     z-index: 1;
