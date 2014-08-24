@@ -37,25 +37,24 @@ function initAudio(elem) {
     var url = elem.attr('audiourl');
     var title = elem.text();
     var artist = elem.attr('artist');
-    $('.player .title').text(title);
-    $('.player .artist').text(artist);
+    $('.player .title').html("<h3>"+title+"</h3>");
+    $('.player .artist').html("<p>"+artist+"</p>");
 
     song = new Audio(url);
-
     // timeupdate event listener
     song.addEventListener('timeupdate',function (){
         var curtime = parseInt(song.currentTime, 10);
         tracker.slider('value', curtime);
     });
-
+       
     $('.playlist li').removeClass('active');
     elem.addClass('active');
 }
+
 function playAudio() {
     song.play();
-
+	
     tracker.slider("option", "max", song.duration);
-
     $('.play').addClass('hidden');
     $('.pause').addClass('visible');
 }
@@ -106,15 +105,11 @@ $('.rew').click(function (e) {
     initAudio(prev);
 });
 
-// show playlist
-$('.pl').click(function (e) {
-    e.preventDefault();
-
-    $('.playlist').fadeIn(300);
-});
-
 // playlist elements - click
 $('.playlist li').click(function () {
     stopAudio();
     initAudio($(this));
+     song.addEventListener('loadedmetadata',function() {
+	    playAudio();
+    });
 });

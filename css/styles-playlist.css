@@ -99,7 +99,7 @@ nav li { margin: 1.95em 0; }
 #shows { 
 /* 	height: 45em;  */
 	border: black 1px solid;
-	background-image: url('../img/stars.jpg');
+	background-image: url('../img/adhoc_winter2014.jpg');
 	background-size: cover;
 	color: white;
 	padding-top: 5.1em; 
@@ -183,9 +183,11 @@ footer p { font-size: 0.45em; line-height: 5em; }
 		background-size: cover;
 	}
 	#about p { padding: 0; }
-	#about li { display: inline-block; width: 48%; margin-bottom: 0.75em; }
-		#about li:nth-child(odd) { float: left; }
-		#about li:nth-child(even) { float: right; }
+	#about li { display: inline-block; width: 31.25%; margin-bottom: 0.75em; }
+	/*
+	#about li:nth-child(odd) { float: left; }
+	#about li:nth-child(even) { float: right; } 
+	*/
 	
 	#playback1 { width: 100%; }
 	#playback-container { min-width: 600px; }
@@ -264,48 +266,28 @@ progress::-moz-progress-bar { background-color: #141414; }
 
 /* Music player with playlist styles */
 
-.example {
-    margin: 50px auto 0;
-    width: 400px;
-}
 .player {
-/*     background: transparent url("../img/spr.png") no-repeat scroll center top; */
-    border: black 1px solid;
-    height: 162px;
+    /* border: black 1px solid; */
+    background-color: #F2F2F2;
+    height: 125px;
     position: relative;
-/*     width: 326px; */
 	width: 100%;
     z-index: 2;
 }
 .title, .artist {
-/*     font-family: verdana; */
-    left: 167px;
-    position: absolute;
-
+	position: relative;
+	top: 2em;
+	width: 100%;
+	text-align: center;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
 }
 .title {
-    font-size: 14px;
-    font-weight: bold;
-    top: 23px;
+    font-size: 0.9em;
 }
 .artist {
-    font-size: 12px;
-    top: 40px;
-}
-.pl {
-/*     background: transparent url("../img/spr.png") no-repeat scroll -274px -175px; */
-    cursor: pointer;
-    height: 34px;
-    left: 270px;
-    position: absolute;
-    top: 20px;
-    width: 32px;
-}
-.pl:hover {
-    top: 21px;
+    font-size: 0.9em;
 }
 
 .controls {
@@ -314,7 +296,7 @@ progress::-moz-progress-bar { background-color: #141414; }
 	left: 10px;
 	position: absolute;
 	top: 65px;
-	width: 138px;
+	width: 100%;
 }
 /*
 .controls .play, .controls .pause, .controls .rew, .controls .fwd {
@@ -329,6 +311,7 @@ progress::-moz-progress-bar { background-color: #141414; }
     background: url('../img/play_icon.png') no-repeat center center;
     width: 26px;
     height: 35px;
+    float: left;
 }
 .controls .pause {
     /*
@@ -365,6 +348,7 @@ progress::-moz-progress-bar { background-color: #141414; }
 .controls .visible {
     display: block;
 }
+/*
 .volume {
     height: 11px;
     left: 186px;
@@ -372,12 +356,13 @@ progress::-moz-progress-bar { background-color: #141414; }
     top: 96px;
     width: 112px;
 }
+*/
 .tracker {
     height: 15px;
 	left: 35px;
 	position: absolute;
 	top: 10px;
-	width: 100%;
+	width: 60.5%;
 	display:inline-block;
 	background: #808080;
 }
@@ -402,23 +387,41 @@ progress::-moz-progress-bar { background-color: #141414; }
     height: 13px;
     width: 13px;
 }
+.time {
+	display: inline-block;
+	position: absolute;
+	right: 3em;
+	top: 10px;
+}
 .playlist {
-    background-color: #333333;
-    border-radius: 5px 5px 5px 5px;
     list-style-type: none;
-    margin: -10px 0 0 2px;
-    padding-bottom: 10px;
-    padding-top: 15px;
+    font-family: 'Lora', serif;
+    /* margin: -10px 0 0 2px; */
+/*     padding-bottom: 10px; */
+/*     padding-top: 15px; */
     position: relative;
-    width: 326px;
+    width: 100%;
     z-index: 1;
 }
 .playlist li {
-    color: #EEEEEE;
+    color: black;
     cursor: pointer;
-    margin: 0 0 5px 15px;
+	padding: 0.5em;
+/*     padding: 0 0 5px 15px; */
+}
+.playlist li:nth-child(even) {
+	background-color: #f2f2f2;
+}
+.playlist li:nth-child(odd) {
+	background-color: black;
+	color: white;
 }
 .playlist li.active {
-    font-weight: bold;
+	background-color: #FFDFA0;
+	color: black;
+}
+span.pl-artist {
+	font-size: 0.8em;
+	font-style: italic;
 }
 
