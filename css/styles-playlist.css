@@ -73,19 +73,26 @@ nav, h1, h3, h4, #shows p, footer p, #playbacktime, .time {
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
 }
-h1, h3, h4, #shows p, #about p, #music p, #contact, footer p { text-align: center; }	
+h1, h2, h3, h4, #shows p, #about p, #music p, #contact, footer p { text-align: center; }	
 
 #logo { vertical-align: middle; padding-bottom: 1.5rem;}
 header { padding: 1.5rem 0; }
 
-nav { font-size: 0.9em; text-align: center; }
+nav { font-size: 1em; text-align: center; }
 nav li { margin: 1.95em 0; }
 
 #about h1, #music h1 { margin-bottom: 2.5em; }
+#about h2 { font-family: 'Lora', serif; font-style: italic; font-size: 1.25em; margin-bottom: 1.5em;  }
 #about p { font-family: 'Lora', serif; font-size: 1.3em; line-height: 1.25em; margin-bottom: 1.75rem; padding: 0 0.8em; }
 #about p:last-child { margin-bottom: 3.75rem; }
 #about li { width: 35%; margin: 0 auto; margin-bottom: 0.2em; }
 #about img { width: 100%; }
+a.drop-line { 
+	color: #999;
+	border-bottom: 1px solid #999;
+	font-style: italic;
+}
+a.drop-line:hover { border-bottom: none; text-decoration: none; }
 
 #music p, #about p { font-family: 'Lora', serif; }
 #music h3 { margin-bottom: 0.35em; }
@@ -97,12 +104,11 @@ nav li { margin: 1.95em 0; }
 }
 
 #shows { 
-/* 	height: 45em;  */
-	/* background-image: url('../img/adhoc_winter2014.jpg'); */
-	background-size: cover;
-/* 	color: white; */
-	/* padding-top: 5.1em;  */
-/* 	padding-bottom: 5.1em; */
+ 	height: 761px;  
+	background: url('../img/adhoc_winter2014.jpg') center no-repeat;
+ 	color: white; 
+	padding-top: 5.1em;  
+ 	padding-bottom: 5.1em; 
 }
 #shows h1 { 
 	/* margin-bottom: 4em;  */
@@ -112,9 +118,10 @@ nav li { margin: 1.95em 0; }
 #shows h4 { font-size: 2.5em; margin-bottom: 0.35em; }
 #shows p { font-size: 1.5em; line-height: 1.25em; }
 
+#contact { padding-top: 150px; padding-bottom: 150px; }
 #contact h1 { margin-bottom: 2.5em; }
 #contact p { font-size: 2em; font-weight: 800; }
-	#contact a { color: #999; }
+#contact a { color: #999; }
 	#contact a:hover { border-bottom: 2px solid #999; }
 	
 footer { background: black; color: white; }
@@ -278,7 +285,9 @@ footer p { font-size: 0.45em; line-height: 5em; }
 }
 .playlist {
     list-style-type: none;
-    font-family: 'Lora', serif;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
     position: relative;
     width: 100%;
     z-index: 1;
@@ -286,23 +295,26 @@ footer p { font-size: 0.45em; line-height: 5em; }
 .playlist li {
     color: black;
     cursor: pointer;
-	padding: 0.5em;
-/*     padding: 0 0 5px 15px; */
+    padding: 1.5em;
 }
 .playlist li:nth-child(even) {
 	background-color: #f2f2f2;
 }
 .playlist li:nth-child(odd) {
-	background-color: black;
-	color: white;
-}
-.playlist li.active {
-	background-color: #FFDFA0;
+	background-color: white;
 	color: black;
 }
-span.pl-artist {
-	font-size: 0.8em;
+.playlist dt.active span{
+	border-bottom: 2px solid black;
+}
+
+dd.pl-artist {
+	display: block;
+	font-family: 'Lora', serif;
 	font-style: italic;
+	text-transform: none;
+	text-decoration: none !important;
+	padding-top: 0.5em;
 }
 
 
@@ -327,7 +339,7 @@ span.pl-artist {
 	.column.fourth { width: 25%; }
 	
 	#logo { width: 180px; float: left; margin-left: 1.95em; }
-	nav { text-align: initial; }
+	nav { text-align: initial; font-size: 0.9em; }
 	nav ul { position: relative; top: 15px; float: right; margin-left: 1.5em; }
 	nav li { display: inline-block; margin: 0 1.75em 0;	}
 	nav li:first-child {margin-left: 0;}
@@ -352,7 +364,7 @@ span.pl-artist {
 	
 	#shows h1 {
 		/* margin-bottom: 10.15em;  */
-		margin-bottom: 2em;
+		/*margin-bottom: 2em;*/
 	}
 	#shows h4 { font-size: 4.85em; }
 	#shows p { font-size: 2.5em; }

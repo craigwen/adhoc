@@ -1,0 +1,21 @@
+Drop us a line - #999 underline lora bold italic
+
+Residents, Guests - Italic, Capitalization
+
+Pics - wider, names in Lora normal 1em
+
+Coming soon - Italic
+
+Music section - gray background, more padding between sections. Remove first 0 in time
+
+Remove artists in playlist, centered text
+
+Contact - more padding between sections
+
+MOBILE
+
+Logo ~25% smaller
+
+Nav - make same size as headings
+
+Profile pics ~25% bigger

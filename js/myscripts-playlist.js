@@ -4,7 +4,7 @@ var tracker = $('.tracker');
 var volume = $('.volume');
 
 // initialization - first element in playlist
-initAudio($('.playlist li:first-child'));
+initAudio($('.playlist li:first-child dt'));
 
 // set volume
 song.volume = 0.8;
@@ -59,7 +59,7 @@ function initAudio(elem) {
     // when song ends run finish function
     song.addEventListener('ended', finish, false);
        
-    $('.playlist li').removeClass('active');
+    $('.playlist dt').removeClass('active');
     elem.addClass('active');
 }
 
@@ -119,8 +119,9 @@ $('.rew').click(function (e) {
 
 // playlist elements - click
 $('.playlist li').click(function () {
+    var songlink = $(this).find('dt');
     stopAudio();
-    initAudio($(this));
+    initAudio(songlink);
     // wait till metadata is loaded for song.duration before playing
     song.addEventListener('loadedmetadata',function() {
 	    playAudio();
