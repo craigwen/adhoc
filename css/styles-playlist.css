@@ -101,8 +101,8 @@ nav li { margin: 1.95em 0; }
 	/* background-image: url('../img/adhoc_winter2014.jpg'); */
 	background-size: cover;
 /* 	color: white; */
-	padding-top: 5.1em; 
-	padding-bottom: 5.1em;
+	/* padding-top: 5.1em;  */
+/* 	padding-bottom: 5.1em; */
 }
 #shows h1 { 
 	/* margin-bottom: 4em;  */
@@ -153,122 +153,6 @@ footer p { font-size: 0.45em; line-height: 5em; }
   *zoom: 1;
 }
 
-/*****************/
-/* Media Queries */
-/*****************/
-
-/* Medium Screens (749px) */
-@media (min-width: 749px) {	
-	body { font-size: 100%; }
-	
-	.column {
-		float: left;
-		padding-left: 1em;
-		padding-right: 1em;
-	}
-	
-	.column.full { width: 100%;	}
-	.column.two-thirds { width: 66.66%;}
-	.column.half { width: 50%; }
-	.column.third { width: 33.33%; }
-	.column.fourth { width: 25%; }
-	
-	#logo { width: 180px; float: left; margin-left: 1.95em; }
-	nav { text-align: initial; }
-	nav ul { position: relative; top: 15px; float:left; margin-left: 1.5em; }
-	nav li { display: inline-block; margin: 0 1.75em 0;	}
-	nav li:last-child { margin: 0 0 0 3.75em; }
-
-	#hero-img {
-		height: 600px;
-		width: 100%; 
-		background: url('../img/newyork.jpg') no-repeat center center;
-		background-size: cover;
-	}
-	#about p { padding: 0; }
-	#about li { display: inline-block; width: 31.25%; margin-bottom: 0.75em; }
-	/*
-	#about li:nth-child(odd) { float: left; }
-	#about li:nth-child(even) { float: right; } 
-	*/
-	
-	#playback1 { width: 100%; }
-	#playback-container { min-width: 600px; }
-	#playback1 progress { width: 65%; }
-	
-	#shows h1 {
-		/* margin-bottom: 10.15em;  */
-		margin-bottom: 2em;
-	}
-	#shows h4 { font-size: 4.85em; }
-	#shows p { font-size: 2.5em; }
-}
-
-/* Large screens (1024px) */
-@media (min-width: 1024px) {
-	#logo { width: auto ;}
-	nav ul { top: 25px; float: right; margin-right: 0.5em; }
-	nav li { margin: 0 3.5em 0; }
-	#playback1 { max-width: 750px; }	
-}
-
-/* End media queries */
-
-
-
-
-/*** Legacy Music player styles ***/
-
-#audioplayer1 { background-color: #f2f2f2; padding: 0.75em 0; margin: 2.75em 0 2.25em 0; }
-#playback1 { padding-top: 0.3em; padding-bottom: 0.3em; }
-#playback1 button {  height: 35px; border: none; vertical-align: middle; display: inline-block; }
-.play-btn { 
-    background: url('../img/play_icon.png') no-repeat center center;
-    width: 26px;
-}
-.pause-btn {
-	background: url('../img/pause_icon.png') no-repeat center center;
-	width: 26px;
-}
-.speaker-btn {
-	background: url('../img/speaker_icon.png') no-repeat center center;	
-	width: 40px;
-	margin-right: 14px;
-	float: right;
-}
-.muted-btn {
-	background: url('../img/mute_icon.png') no-repeat center center;	
-	width: 40px;
-	margin-right: 14px;
-	float: right;
-}
-
-#playback1 { margin-left: auto; margin-right: auto; width: 300px; }
-#playback1 progress { 
-  margin-left: 1rem; 
-  margin-right: 1rem;
-  width: 30%; 
-  height: 16px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: #888;
-  border: none;
-}
-progress::-webkit-progress-bar, progress::-moz-progress-bar, progress::progress-bar {
-  background: #141414;
-}
-progress::-webkit-progress-value { background: #141414; }
-progress::-moz-progress-bar { background-color: #141414; }
-
-#playbacktime { display: inline-block; min-width: 65px; content: "0:00";}
-
-.no-display { display: none; }
-
-/*** End Legacy Music player styles ***/
-
-
-
 
 /* Music player with playlist styles */
 
@@ -299,8 +183,8 @@ progress::-moz-progress-bar { background-color: #141414; }
 .controls {
     cursor: pointer;
 	height: 25px;
-	left: 10px;
 	position: absolute;
+	margin-top: 0.5em;
 	top: 65px;
 	width: 100%;
 }
@@ -311,6 +195,7 @@ progress::-moz-progress-bar { background-color: #141414; }
     width: 26px;
     height: 35px;
     float: left;
+    margin-left: 5px;
 }
 .controls .pause {
     /*
@@ -361,7 +246,7 @@ progress::-moz-progress-bar { background-color: #141414; }
 	left: 35px;
 	position: absolute;
 	top: 10px;
-	width: 67.5%;
+	width: 62.5%;
 	display:inline-block;
 	background: #808080;
 }
@@ -420,3 +305,67 @@ span.pl-artist {
 	font-style: italic;
 }
 
+
+/*****************/
+/* Media Queries */
+/*****************/
+
+/* Medium Screens (749px) */
+@media (min-width: 749px) {	
+	body { font-size: 100%; }
+	
+	.column {
+		float: left;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	
+	.column.full { width: 100%;	}
+	.column.two-thirds { width: 66.66%;}
+	.column.half { width: 50%; }
+	.column.third { width: 33.33%; }
+	.column.fourth { width: 25%; }
+	
+	#logo { width: 180px; float: left; margin-left: 1.95em; }
+	nav { text-align: initial; }
+	nav ul { position: relative; top: 15px; float: right; margin-left: 1.5em; }
+	nav li { display: inline-block; margin: 0 1.75em 0;	}
+	nav li:first-child {margin-left: 0;}
+	nav li:last-child { margin: 0 0 0 3.75em; }
+
+	#hero-img {
+		height: 600px;
+		width: 100%; 
+		background: url('../img/newyork.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	#about p { padding: 0; }
+	#about li { display: inline-block; width: 31.25%; margin-bottom: 0.75em; }
+	/*
+	#about li:nth-child(odd) { float: left; }
+	#about li:nth-child(even) { float: right; } 
+	*/
+	
+	#playback1 { width: 100%; }
+	#playback-container { min-width: 600px; }
+	#playback1 progress { width: 65%; }
+	
+	#shows h1 {
+		/* margin-bottom: 10.15em;  */
+		margin-bottom: 2em;
+	}
+	#shows h4 { font-size: 4.85em; }
+	#shows p { font-size: 2.5em; }
+	
+	.tracker { width: 65%; }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 1024px) {
+	#logo { width: auto ;}
+	nav ul { top: 25px; float: right; margin-right: 0.5em; }
+	nav li { margin: 0 3.5em 0; }	
+	.player { max-width: 750px; }	
+}
+
+/* End media queries */
