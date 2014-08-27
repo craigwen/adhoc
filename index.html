@@ -2,10 +2,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Ad Hoc is a growing ensemble of vocalists and musicians living and performing in New York City. We explore the traditions of early music and also play with its possibilities, drawing from an eclectic array of influences to keep it fresh." />
 	<title>Ad Hoc: Early Music Choir</title>
-	<link rel="stylesheet" href="css/styles.css" title="General styles">
+	<link rel="stylesheet" href="css/styles-playlist.css" title="General styles">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Lora:400,800|Montserrat:400,700' rel='stylesheet' type='text/css'> <!-- Google fonts -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Lora:400,400,400italic,700italic,800|Montserrat:400,700' rel='stylesheet' type='text/css'> <!-- Google fonts -->
 </head>
 
 <body>
@@ -13,7 +15,7 @@
 <div class="wrapper">		
 	<header class="row clearfix">
 		<nav class="column full centered">
-			<img id="logo" src="img/adhoc-logo.png">
+			<img id="logo" src="img/adhoc-logo.svg">
 			<ul>
 				<li><a class="scroll" href="#about-anchor">about</a></li>
 				<li><a class="scroll" href="#music-anchor">music</a></li>
@@ -32,65 +34,83 @@
 			<a id="about-anchor"></a>
 			<h1>about</h1>
 			<p>Ad Hoc is a growing ensemble of vocalists and musicians living and performing in New York City.  We explore the traditions of early music and also play with its possibilities, drawing from an eclectic array of influences to keep it fresh.  Our core is a group of dedicated residents, and we’re always looking to bring in skilled, creative guests to work with us on upcoming projects.</p>
-			<p>Interested in joining Ad Hoc as a resident or guest? <a class="scroll" href="#contact-anchor">Drop us a line</a>.</p>
-			<div class="column centered space-top clearfix">
-				<h1>residents</h1>
+			<p>Interested in joining Ad Hoc as a resident or guest?</p>
+			<p><a class="drop-line" href="mailto:hello@adhoc-ny.com" title="Email Adhoc">Drop us a line.</a></p>
+		</div>
+
+			<div class="column centered two-thirds space-top clearfix">
+				<h2>Residents</h2>
 				<ul>
-					<li><img src="img/tina.jpg" alt="Tina"></li>
-					<li><img src="img/joe.jpg" alt="Joe"></li>
-					<li><img src="img/carol.jpg" alt="Carol"></li>
-					<li><img src="img/lynn.jpg" alt="Lynn"></li>
-					<li><img src="img/val.jpg" alt="Val"></li>
+					<li>
+						<dt><img src="img/tina.jpg" alt="Tina Scepanovic"></dt>
+						<dd>Tina Scepanovic</dd>
+					</li>
+					<li>
+						<dt><img src="img/joe.jpg" alt="Joe Tesoro"></dt>
+						<dd>Joe Tesoro</dd>
+					</li>
+					<li>
+						<dt><img src="img/carol.jpg" alt="Carol Szwei"></dt>
+						<dd>Carol Szwei</dd>
+					</li>
+					<li>
+						<dt><img src="img/lynn.jpg" alt="Lynn Kiang"></dt>
+						<dd>Lynn Kiang</dd>
+					</li>
+					<li>
+						<dt><img src="img/val.jpg" alt="Valerie Madamba"></dt>
+						<dd>Valerie Madamba</dd>
+					</li>
 				</ul>
 			</div>
-			<div class="column centered space-top">
-				<h1>guests</h1>
-				<p>Coming Soon</p>
-			</div>
-		</div>	
+			<!-- <div class="column centered space-top">
+				<h2>Guests</h2>
+				<p><span style="font-style: italic;">Coming Soon</span></p>
+			</div> -->	
 	</section>
 </div> <!-- End .wrapper -->
-	
+
 	<section>
-		<div id="music">			
+		<div id="music" class="row">					
 			<a id="music-anchor"></a>
 			<h1>music</h1>
-			<figure id="audioplayer">
-				<div id="playback-container" class="column half centered">
-					<div id="playback"></div>
-					<audio controls id="audiotrack" preload="auto" >
-						<source src="adhoc_arcadelt2014.ogg" type="audio/ogg">
-						<source src="adhoc_arcadelt2014.mp3" type="audio/mpeg">
-					</audio>
-				</div>
-			</figure>			
-			<h3>VOI VE N’ANDANTE AL CIELO</h3>
-			<p>Jacques Arcadelt</p>
-			
-			<!--
-			<figure id="audioplayer">
-				<div id="playback-container" class="column half centered">
-					<div id="playback"></div>
-					<audio controls id="audiotrack" preload="auto" >
-						<source src="adhoc_arcadelt2014.ogg" type="audio/ogg">
-						<source src="adhoc_arcadelt2014.mp3" type="audio/mpeg">
-					</audio>
-				</div>
-			</figure>			
-			<h3>VOI VE N’ANDANTE AL CIELO</h3>
-			<p>Jacob Arcadelt</p>
--->
-
+			<div class="player column centered">
+			    <!-- <div class="title"></div>
+			    <div class="artist"></div> -->
+			    <div class="controls">
+			        <div class="play"></div>
+			        <div class="pause"></div>
+   				    <div class="tracker"></div>
+   				    <div class="time">0:00</div>				        
+			    </div>
+			    <!-- <div class="volume"></div> -->
+			</div>
+			<dl class="playlist">				   
+			     <li>
+			    	<dt audiourl="CLIP_ad_una.mp3" oggurl="CLIP_ad_una.ogg" artist="Luca Marenzio"><span>Ad Una Fresca Riva</span></dt>	
+			    	<dd class="pl-artist">Luca Marenzio</dd>
+			    </li>
+			    <li>
+			    	<dt audiourl="Amarilli-mia-bella-FINAL.mp3" oggurl="Amarilli-mia-bella-FINAL.ogg" artist="Giulio Caccini"><span>Amarilli mia bella</span></dt>
+			    	<dd class="pl-artist">Giulio Caccini</dd>
+			    </li>
+			    <li>
+			    	<dt audiourl="CLIP_ocessate.mp3" oggurl="CLIP_ocessate.ogg" artist="Alessandro Scarlatti"><span>O Cessate di piagarmi</span></dt>
+			    	<dd class="pl-artist">Alessandro Scarlatti</dd>
+			    </li<>				   
+			     <li>
+			    	<dt audiourl="CLIP_ilbianco.mp3" oggurl="CLIP_ilbianco.ogg" artist="Jacques Arcadelt"><span>Il bianco dolce cigno</span></dt>
+			    	<dd class="pl-artist">Jacques Arcadelt</dd>
+			    </li>
+			</dl>					
 		</div>
 	</section>
-
 
 	<section id="shows">
 		<a id="shows-anchor"></a>
 		<h1>shows</h1>
-		<h4>SUMMER OF LOVE</h4>
-		<p>7PM, JULY 27, 2014</p>
-		<p>107 E 63RD STREET, NO. 4B</p>
+	 	<h4>WINTER SEASON</h4>
+		<p>12.07.14</p>
 	</section>
 	
 <div class="wrapper">
@@ -108,6 +128,6 @@
 	</footer>
 	
 			
-	<script src="js/myscripts.js"></script>
+	<script src="js/myscripts-playlist.js"></script>
 </body>
 

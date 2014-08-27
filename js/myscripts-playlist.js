@@ -36,7 +36,16 @@ tracker.slider({
 });
 
 function initAudio(elem) {
-    var url = elem.attr('audiourl');
+    // Checks if browser supports mp3 or ogg
+    var myAudio = document.createElement('audio'); 
+    var canPlayMp3 = !!myAudio.canPlayType && "" != myAudio.canPlayType('audio/mpeg');
+    if (canPlayMp3) {
+        var url = elem.attr('audiourl');
+    }
+    else {
+        var url = elem.attr('oggurl');
+    }
+    
     var title = elem.text();
     var artist = elem.attr('artist');
     $('.player .title').html("<h3>"+title+"</h3>");
@@ -52,7 +61,7 @@ function initAudio(elem) {
 	    var m = parseInt((song.currentTime / 60) % 60);
 	    parseInt((song.currentTime / 60) % 60);
 	    s = (s >= 10) ? s : "0" + s;
-	    m = (m >= 10) ? m : "0" + m;
+	    m = (m >= 10) ? m : m;
 	    $(".time").html(m + ':' + s );
     });
     
@@ -123,9 +132,9 @@ $('.playlist li').click(function () {
     stopAudio();
     initAudio(songlink);
     // wait till metadata is loaded for song.duration before playing
-    song.addEventListener('loadedmetadata',function() {
-	    playAudio();
-    });
+    song.addEventListener('loadedmetadata',playAudio, false );
+    // second call for Safari iOS 
+    playAudio();
 });
 
 // reset time to 0 after song finishes
@@ -140,3 +149,11 @@ $(".scroll").click(function(e) {
 	e.preventDefault();
 	$('html,body').animate({scrollTop:$(this.hash).offset().top-40}, 450);
 });
+
+// Playlist underline on hover
+$(".playlist li").mouseover(function(){
+	$(this).find("dt span").addClass("mouse-over");
+})
+    .mouseout(function(){
+        $(this).find("dt span").removeClass("mouse-over");
+    });
