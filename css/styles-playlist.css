@@ -108,15 +108,22 @@ a.drop-line:hover { border-bottom: none; text-decoration: none; }
 
 #shows { 
  	/*height: 761px;  */
-	background: url('../img/adhoc_winter2014.jpg') center no-repeat;
- 	background-size: cover;
- 	color: #E6D377; 
-	padding-top: 3.8em;  
- 	padding-bottom: 3.8em; 
+	/*background: url('../img/adhoc_flyer_winter2014v2.jpg') center no-repeat;
+ 	background-size: cover;*/
+ 	background-color: #121a23; 
+ 	/*padding-bottom: 28.8em;*/
 }
+
+#shows-inside {
+	max-width: 1280px;
+	margin: 0 auto;	
+}
+
 #shows h1 { 
-	/* margin-bottom: 4em;  */
+	position: relative;
+	top: 1.8em;  
 	font-size: 1.2em; 
+	line-height: 0;
 	color: white;
 }
 #shows h4 { font-size: 1em; margin-bottom: 0.35em; margin-top: 23.25em; font-weight: 400;}
@@ -369,10 +376,7 @@ dd.pl-artist {
 	#playback-container { min-width: 600px; }
 	#playback1 progress { width: 65%; }
 	
-	#shows h1 {
-		/* margin-bottom: 10.15em; */
-		/* margin-bottom: 2em; */
-	}
+	#shows h1 {	}
 	#shows h4, #shows p { font-size: 1.65em; }
 	
 	.player { width: 450px; }

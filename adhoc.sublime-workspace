@@ -8,10 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/craigwen/Sites/my-awesome-compass-project/sass/screen.scss",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 904,
+				"buffer_size": 6002,
 				"line_ending": "Unix"
 			}
 		}
@@ -74,6 +74,12 @@
 	],
 	"file_history":
 	[
+		"/Users/craigwen/Sites/Craig Site/index-before-full-parallax.html",
+		"/Users/craigwen/Sites/Craig Site/401.shtml",
+		"/Users/craigwen/Sites/Craig Site/craigsite.sublime-project",
+		"/Users/craigwen/Sites/wordpress-adhoc/wp-config.php",
+		"/Users/craigwen/Sites/wordpress-adhoc/wp-settings.php",
+		"/Users/craigwen/Sites/wordpress-adhoc/index.php",
 		"/Users/craigwen/Dropbox/Ad Hoc/index.html",
 		"/Users/craigwen/Dropbox/Ad Hoc/css/styles.css",
 		"/Users/craigwen/Dropbox/Ad Hoc/js/myscripts-playlist.js",
@@ -133,39 +139,33 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/craigwen/Sites/my-awesome-compass-project/sass/screen.scss",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 904,
+						"buffer_size": 6002,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								904,
-								904
+								5244,
+								5244
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1782.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				}
-			]
-		},
-		{
-			"sheets":
-			[
 			]
 		}
 	],
@@ -186,18 +186,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -249,14 +242,14 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 230.0,
 	"status_bar_visible": true,
 	"template_settings":
